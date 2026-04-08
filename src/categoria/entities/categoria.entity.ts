@@ -4,12 +4,12 @@ import { Produto } from "../../produto/entities/produto.entity";
 @Entity({ name: 'tb_categorias' })
 export class Categoria {
     @PrimaryGeneratedColumn()
-    id: number;
+    id!: number;
 
     @Column({ length: 255, nullable: false })
-    descricao: string;
+    descricao!: string;
 
 
-    oneToMany(() => Produto, (produto) => produto.categoria)
-produtos: Produto[];
+    @OneToMany(() => Produto, (produto) => produto.categoria)
+    produtos!: Produto[];
 }

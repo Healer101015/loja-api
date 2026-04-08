@@ -1,5 +1,6 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete, Put, HttpCode, HttpStatus } from '@nestjs/common';
+import { Controller, Get, Post, Body, Param, Delete, Put, HttpCode, HttpStatus } from '@nestjs/common';
 import { ProdutoService } from './produto.service';
+import { Produto } from './entities/produto.entity';
 
 
 @Controller('produtos')
